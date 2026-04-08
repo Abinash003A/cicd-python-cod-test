@@ -1,7 +1,9 @@
 #install these maually 1st
+
 sudo yum install -y git python3 python3-pip
 
 ## Pipeline code
+
 pipeline {
     agent any
 
@@ -32,9 +34,9 @@ pipeline {
                 '''
             }
         }
-
     }
 }
+
 
 ==================================
 <img width="801" height="247" alt="image" src="https://github.com/user-attachments/assets/1f2931ad-de25-4a43-99b5-52d192b6c7e1" />
