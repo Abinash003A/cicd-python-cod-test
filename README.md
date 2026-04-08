@@ -6,9 +6,10 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
-        git branch: 'main', url: 'https://github.com/Abinash003A/cicd-python-cod-test.git'
+                git branch: 'main', url: 'https://github.com/Abinash003A/cicd-python-cod-test.git'
             }
         }
 
@@ -22,17 +23,18 @@ pipeline {
                 '''
             }
         }
-stage('Run App') {
-    steps {
-        sh '''
-        source venv/bin/activate
 
-        nohup python3 app.py > app.log 2>&1 &
-        '''
+        stage('Run App') {
+            steps {
+                sh '''
+                source venv/bin/activate
+                nohup python3 app.py > app.log 2>&1 &
+                '''
+            }
+        }
+
     }
 }
-    }
-}
 
-<img width="801" height="247" alt="image" src="https://github.com/user-attachments/assets/1f2931ad-de25-4a43-99b5-52d192b6c7e1" />
+==================================
 <img width="801" height="247" alt="image" src="https://github.com/user-attachments/assets/1f2931ad-de25-4a43-99b5-52d192b6c7e1" />
